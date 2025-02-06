@@ -6,9 +6,13 @@ import matplotlib
 matplotlib.use('TkAgg') #Had issues with the weyland backend for matplotlib
 import matplotlib.pyplot as plt
 
+import math
+
 data = pd.read_csv('Car_Data.csv')
 
 #print(data.head())
+
+print(data.head())
 
 #----------DESCRIPTIVE STATS----------
 
@@ -28,20 +32,32 @@ print(f"correlation coefficient: {c_corr["Price"]["Mileage"]}")
 
 #Doing it the hard way
 
-delta_price = delta_price = 0
-sum1 = sum2 = sum3 = 0
+sum_x = 0
+sum_y = 0
+sum_xy = 0
+sum_x2 = 0
+sum_y2 = 0
+n = 0
 
-for i in range(len(data.columns)):
-    delta_mileage = int(data.iloc[i+1]["Mileage"]) - int(data.iloc[i]["Mileage"])
-    delta_price = int(data.iloc[i+1]["Price"]) - int(data.iloc[i]["Price"])
+for i in range(len(data)):
+    x = data.loc[i, 'Price']
+    y = data.loc[i, 'Mileage']
+    
+    n += 1
+    sum_x += x
+    sum_y += y
+    sum_xy += x * y
+    sum_x2 += x**2
+    sum_y2 += y**2
+    
+    denominator = np.sqrt((n * sum_x2 - sum_x**2) * (n * sum_y2 - sum_y**2))
+    if denominator != 0:
+        r = (n * sum_xy - sum_x * sum_y) / denominator
+    else:
+        r = 0 
 
-    sum1 = delta_mileage*delta_price + sum1
+print(f"correlation coefficient by hand {r}")
 
-    sum2 = delta_mileage*delta_mileage + sum2
-    sum3 = delta_price*delta_price + sum3
-
-corr_coeff = sum1 / (np.sqrt(sum2)*np.sqrt(sum3))
-print(f"correlation coefficient2: {corr_coeff}")
 
 #----------LINEAR REGRESSION----------
 
