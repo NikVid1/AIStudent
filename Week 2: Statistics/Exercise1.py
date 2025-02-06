@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 data = pd.read_csv('Student_Scores_Data.csv')
 
-print(f"{data.columns}")
+print(data.head())
 
 #print(data.head())
 

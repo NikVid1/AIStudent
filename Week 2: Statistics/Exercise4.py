@@ -11,15 +11,13 @@ from scipy.stats import t
 
 data = pd.read_csv('A_B_Test_Data.csv')
 
-#print(data.head)
-
 def hypothesis_test_from_scratch():
 
     # 1. Calculate the means of the two samples
 
     mean_eng_new = data.groupby("Design").agg({"mean"}).iloc[0,1]
     mean_eng_old = data.groupby("Design").agg({"mean"}).iloc[1,1]
-
+    
     # 2. Calculate the standard deviations of the two samples
 
     std_eng_new = data.groupby("Design").agg({"std"}).iloc[0,1]
