@@ -1,0 +1,23 @@
+\frametitle{Examples of Clustering Algorithms}
+\begin{itemize}
+    \item Common algorithms:
+    \begin{itemize}
+        \item K-Means.
+        \item DBSCAN.
+        \item Agglomerative Clustering.
+        \item Gaussian Mixture Models.
+    \end{itemize}
+\end{itemize}
+\begin{lstlisting}
+from sklearn.cluster import KMeans
+
+# Initialize and fit K-Means
+kmeans = KMeans(n_clusters=3)
+kmeans.fit(X)
+
+# Predict clusters
+clusters = kmeans.predict(X)
+
+# Cluster centers
+centers = kmeans.cluster_centers_
+\end{lstlisting}

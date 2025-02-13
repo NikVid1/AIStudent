@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Introduction to Machine Learning}{2}{0}{1}
+\beamer@sectionintoc {2}{Task 1: Data Preprocessing}{8}{0}{2}
+\beamer@sectionintoc {3}{Task 2: Training a Classification Model}{13}{0}{3}
+\beamer@sectionintoc {4}{Task 3: Best Practices and Hyperparameter Tuning}{18}{0}{4}
+\beamer@sectionintoc {5}{Task 4: Regression Models}{21}{0}{5}
+\beamer@sectionintoc {6}{Task 5: Clustering}{24}{0}{6}
+\beamer@sectionintoc {7}{Conclusion}{27}{0}{7}

@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{About me}{2}{0}{1}
+\beamer@sectionintoc {2}{Descriptive Statistics and Data Visualization}{4}{0}{2}
+\beamer@sectionintoc {3}{Probability Theory and Simulation}{10}{0}{3}
+\beamer@sectionintoc {4}{Correlation and Regression Analysis}{15}{0}{4}
+\beamer@sectionintoc {5}{A/B Testing and Hypothesis Testing}{20}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{25}{0}{6}
